@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/basics/basics.iml" filepath="$PROJECT_DIR$/basics/basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jobseeker/jobseeker.iml" filepath="$PROJECT_DIR$/jobseeker/jobseeker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recruit/recruit.iml" filepath="$PROJECT_DIR$/recruit/recruit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resume/resume.iml" filepath="$PROJECT_DIR$/resume/resume.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart_recruit.iml" filepath="$PROJECT_DIR$/smart_recruit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+    </modules>
+  </component>
+</project>

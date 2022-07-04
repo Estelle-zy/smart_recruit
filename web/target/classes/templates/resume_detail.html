@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历展示</title>
+</head>
+<body>
+
+
+    <table border="1px" cellspacing="1px" cellpadding="10px">
+        <tr>
+            <th>UserId</th>
+            <th>Actual_Name</th>
+            <th>Sex</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Graduate_School</th>
+            <th>Awards</th>
+            <th>Introduce</th>
+            <th>Experience</th>
+        </tr>
+        <tr >
+            <td th:text="${data.id}"></td>
+            <td th:text="${data.name}"></td>
+            <td th:text="${data.sex}"></td>
+            <td th:text="${data.age}"></td>
+            <td th:text="${data.email}"></td>
+            <td th:text="${data.phone}"></td>
+            <td th:text="${data.school}"></td>
+            <td th:text="${data.awards}"></td>
+            <td th:text="${data.introduce}"></td>
+            <td th:text="${data.experience}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

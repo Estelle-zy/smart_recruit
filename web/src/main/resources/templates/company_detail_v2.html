@@ -1,0 +1,76 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>招聘公司详情页</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link href="http://fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+</head>
+<body>
+    <center><h1 th:text="${data.name}"></h1></center>
+    <input hidden="hidden" id="id" th:value="${data.id}"/>
+    <section class="contact py-lg-4 py-md-3 py-sm-3 py-3">
+        <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+            <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">联系我们吧！</h3>
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="info-para">
+                        <!--contact-map -->
+                        <form action="#" method="post">
+                            <div class="row wls-contact-mid">
+                                <div class="col-md-6 col-sm-6 form-group contact-forms">
+                                    <input type="text" class="form-control" placeholder="Actual_Name" required="">
+                                </div>
+                            </div>
+                            <div class="row agile-wls-contact-mid">
+                                <div class="col-md-6 col-sm-6 form-group contact-forms">
+                                    <input type="text" class="form-control" placeholder="Phone" required="">
+                                </div>
+                                <div class="col-md-6 col-sm-6 form-group contact-forms">
+                                    <input type="email" class="form-control" placeholder="Email" required="">
+                                </div>
+                            </div>
+                            <div class="form-group contact-forms">
+                                <textarea class="form-control" rows="3" placeholder="个人简历" required=""></textarea>
+                            </div>
+                            <div class="text-left click-subscribe">
+                                <button type="submit" class="btn btn-block click-me">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 contact-right ">
+                    <div class="mb-lg-5 mb-md-4 mb-sm-3 mb-3 footer_grid_left text-center">
+                        <div class="contact_footer_grid_left text-center mb-3">
+                            <span class="fa fa-map-marker"></span>
+                        </div>
+                        <p>地址地址地址地址<br>地址地址地址地址</p>
+                    </div>
+                    <div class="mb-lg-5 mb-md-4 mb-sm-3 mb-3 footer_grid_left text-center">
+                        <div class="contact_footer_grid_left text-center mb-3">
+                            <span class="fa fa-phone"></span>
+                        </div>
+                        <p>+(000) 111 1111 11<br>+(010) 222 2222 22</p>
+                    </div>
+                    <div class="footer_grid_left text-center">
+                        <div class="contact_footer_grid_left text-center mb-3">
+                            <span class="fa fa-envelope"></span>
+                        </div>
+                        <p><a href="mailto:info@example.com">info@example1.com</a>
+                            <br><a href="mailto:info@example.com">info@example2.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

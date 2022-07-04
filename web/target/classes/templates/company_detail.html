@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>招聘公司详情页</title>
+</head>
+<body>
+       <center><h1 th:text="${data.name}"></h1></center>
+        <input hidden="hidden" id="id" th:value="${data.id}"/>
+        <div>
+            <h3>公司类型:</h3>
+            <p th:text="${data.type}"></p>
+        </div>
+        <div>
+            <h3>公司简介:</h3>
+            <p th:text="${data.introduce}"></p>
+        </div>
+        <div>
+            <h3>公司地址：</h3>
+            <p th:text="${data.address}"></p>
+        </div>
+        <div>
+            <a href="/api/web/writeResume">我要求职</a>
+        </div>
+
+</body>
+</html>

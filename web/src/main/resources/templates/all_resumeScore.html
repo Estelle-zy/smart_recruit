@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Score</th>
+                <th>Operation</th>
+            </tr>
+            <tr th:each="resumeScore:${data}">
+                <td th:text="${resumeScore.id}"></td>
+                <td th:text="${resumeScore.score}"></td>
+                <input hidden="hidden" id="id" th:value="${resumeScore.id}"/>
+                <td><input type="button" value="查看其简历" onclick="findDetail()"/></td>
+            </tr>
+        </table>
+    </center>
+</body>
+<script>
+    function findDetail() {
+        var id = $("#id").val();
+        window.location.href="/api/web/findDetail2?id="+id;
+    }
+</script>
+</html>

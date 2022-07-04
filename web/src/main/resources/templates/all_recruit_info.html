@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>所有的招聘信息页面</title>
+    <script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+</head>
+<body>
+    <center>
+        <table cellspacing="10px" cellpadding="10px">
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>操作</th>
+            </tr>
+            <tr th:each="recruit :${data}">
+                <td th:text="${recruit.title}"></td>
+                <td th:text="${recruit.content}"></td>
+                <input hidden="hidden" id="id" th:value="${recruit.id}"/>
+                <td ><input type="button" value="查看详情" onclick="findDetail()" /></td>
+            </tr>
+        </table>
+
+        <a href="javascript:prePage()">上一页</a>
+        <span th:text="${pageNum}"></span>/<span th:text="${pages}"></span>
+        <a href="javascript:nextPage()">下一页</a>
+        <input hidden="hidden" id="prePage" th:value="${prePage}"/>
+        <input hidden="hidden" id="nextPage" th:value="${nextPage}"/>
+    </center>
+</body>
+
+<script type="text/javascript" >
+    function findDetail() {
+        var id = $("#id").val();
+        window.location.href="/api/web/findDetail?id="+id;
+    }
+    function prePage() {
+        var prePage = $("#prePage").val();
+        if (prePage==0){
+            prePage=1;
+        }
+        window.location.href="/api/web/findAll?pageNum="+prePage+"&pageSize=2";
+
+    }
+    function nextPage() {
+        var nextPage = $("#nextPage").val();
+        if (nextPage==0){
+            nextPage=1;
+        }
+        window.location.href="/api/web/findAll?pageNum="+nextPage+"&pageSize=2";
+    }
+</script>
+</html>
